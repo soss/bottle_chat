@@ -1,7 +1,7 @@
 from bottle import route, run
 
-@route('/')
-def index():
-    return '<b>Hello, World!</b>'
+@route('/:name')
+def index(name):
+    return '<b>Hello, %s!</b>' % name
 
 run(host='localhost', port=8080)
